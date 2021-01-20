@@ -1,0 +1,22 @@
+  <div bsModal #smallModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Delete Confirmation</h4>
+          <button type="button" class="close" (click)="smallModal.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" *ngIf="DeleteOption">
+            <p>{{DeleteOption.message}}</p> 
+            <!-- <p>{{DeleteOption |json}}</p> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="smallModal.hide()">Close</button>
+          <button type="button" class="btn btn-danger" (click)="confirmDelete()">Confirm</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  
+  
